@@ -1,0 +1,114 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Scrollmenu by denislins</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/github-light.css">
+    <meta name="viewport" content="width=device-width">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>Scrollmenu</h1>
+        <p>A pure javascript menu for single page applications with animated scroll</p>
+
+        <p class="view"><a href="https://github.com/denislins/scrollmenu">View the Project on GitHub <small>denislins/scrollmenu</small></a></p>
+
+
+        <ul>
+          <li><a href="https://github.com/denislins/scrollmenu/zipball/master">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/denislins/scrollmenu/tarball/master">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="https://github.com/denislins/scrollmenu">View On <strong>GitHub</strong></a></li>
+        </ul>
+      </header>
+      <section>
+        <h1>
+<a id="scrollmenujs" class="anchor" href="#scrollmenujs" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>scrollmenu.js</h1>
+
+<p>A pure javascript menu for single page applications with animated scroll</p>
+
+<h2>
+<a id="getting-started" class="anchor" href="#getting-started" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Getting started</h2>
+
+<h3>
+<a id="installation" class="anchor" href="#installation" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Installation</h3>
+
+<p>The preferred installation method is via bower:</p>
+
+<div class="highlight highlight-source-shell"><pre>$ bower install scrollmenu</pre></div>
+
+<p>But you can also copy the <a href="https://raw.githubusercontent.com/denislins/scrollmenu/master/scrollmenu.js">file</a> directly to your application.</p>
+
+<h3>
+<a id="basic-usage" class="anchor" href="#basic-usage" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Basic usage</h3>
+
+<p>Add the dependency to your page:</p>
+
+<div class="highlight highlight-text-html-basic"><pre>&lt;<span class="pl-ent">script</span> <span class="pl-e">type</span>=<span class="pl-s"><span class="pl-pds">"</span>text/javascript<span class="pl-pds">"</span></span> <span class="pl-e">src</span>=<span class="pl-s"><span class="pl-pds">"</span>scrollmenu.js<span class="pl-pds">"</span></span>&gt;&lt;/<span class="pl-ent">script</span>&gt;</pre></div>
+
+<p>After, initialize the menu passing a selector that will match your links in the menu:</p>
+
+<div class="highlight highlight-source-js"><pre><span class="pl-k">new</span> <span class="pl-en">ScrollMenu</span>(<span class="pl-s"><span class="pl-pds">'</span>.menu a<span class="pl-pds">'</span></span>)</pre></div>
+
+<p>And you're set.</p>
+
+<h2>
+<a id="demo" class="anchor" href="#demo" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Demo</h2>
+
+<p>A demo page can be found <a href="https://raw.githubusercontent.com/denislins/scrollmenu/master/scrollmenu.js">here</a>.</p>
+
+<h2>
+<a id="documentation" class="anchor" href="#documentation" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Documentation</h2>
+
+<div class="highlight highlight-source-js"><pre><span class="pl-k">new</span> <span class="pl-en">ScrollMenu</span>(selectors[, options])</pre></div>
+
+<h3>
+<a id="selectors" class="anchor" href="#selectors" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Selectors</h3>
+
+<p>An array of selectors that will match <code>a</code> elements. Can be a simple string for simplicity.</p>
+
+<h3>
+<a id="options" class="anchor" href="#options" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Options</h3>
+
+<p>An object that will override the library's default options. The default options are presented below.</p>
+
+<div class="highlight highlight-source-js"><pre>{
+  <span class="pl-c">// animation duration in milliseconds</span>
+  duration<span class="pl-k">:</span> <span class="pl-c1">400</span>,
+
+  <span class="pl-c">// padding to recognize a section as active when scrolling</span>
+  activeOffset<span class="pl-k">:</span> <span class="pl-c1">40</span>,
+
+  <span class="pl-c">// padding when scrolling to a container via menu click</span>
+  scrollOffset<span class="pl-k">:</span> <span class="pl-c1">10</span>,
+
+  <span class="pl-c">// easing function, the default is 'easeInOutCubic'</span>
+  <span class="pl-c">// you can see more in here: http://gsgd.co.uk/sandbox/jquery/easing/jquery.easing.1.3.js</span>
+  <span class="pl-en">easingFunction</span><span class="pl-k">:</span> <span class="pl-k">function</span>(<span class="pl-smi">t</span>, <span class="pl-smi">b</span>, <span class="pl-smi">c</span>, <span class="pl-smi">d</span>) {
+    <span class="pl-k">if</span> ((t<span class="pl-k">/=</span>d<span class="pl-k">/</span><span class="pl-c1">2</span>) <span class="pl-k">&lt;</span> <span class="pl-c1">1</span>) <span class="pl-k">return</span> c<span class="pl-k">/</span><span class="pl-c1">2</span><span class="pl-k">*</span>t<span class="pl-k">*</span>t<span class="pl-k">*</span>t <span class="pl-k">+</span> b;
+    <span class="pl-k">return</span> c<span class="pl-k">/</span><span class="pl-c1">2</span><span class="pl-k">*</span>((t<span class="pl-k">-=</span><span class="pl-c1">2</span>)<span class="pl-k">*</span>t<span class="pl-k">*</span>t <span class="pl-k">+</span> <span class="pl-c1">2</span>) <span class="pl-k">+</span> b;
+  },
+};</pre></div>
+
+<h2>
+<a id="compatibility" class="anchor" href="#compatibility" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Compatibility</h2>
+
+<p>Tested in Chrome, Firefoxn Safari, IE11 and Edge. Please open an issue if you find some sort of bug.</p>
+
+<p>Also, please note that we probably won't support IE9-, mainly because they lack support for the history API.</p>
+      </section>
+      <footer>
+        <p>This project is maintained by <a href="https://github.com/denislins">denislins</a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
+    </div>
+    <script src="javascripts/scale.fix.js"></script>
+    
+  </body>
+</html>
