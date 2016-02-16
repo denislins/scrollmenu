@@ -67,3 +67,9 @@ An object that will override the library's default options. The default options 
   },
 };
 ```
+
+## Compatibility
+
+Tested in Chrome, Firefoxn Safari, IE11 and Edge. Please open an issue if you find some sort of bug.
+
+Also, please note that we probably won't support IE9-, mainly because they lack support for the history API.
