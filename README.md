@@ -1,5 +1,5 @@
 # scrollmenu.js
-A pure javascript menu for single page applications with animated scroll
+A pure javascript menu for single page applications with animated scroll and a really small footprint (1kb gzipped)
 
 ## Getting started
 
