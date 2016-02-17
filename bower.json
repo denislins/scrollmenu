@@ -1,0 +1,19 @@
+{
+  "name": "scrollmenu",
+  "main": "scrollmenu.js",
+  "homepage": "https://github.com/denislins/scrollmenu",
+  "authors": [
+    "Denis Lins <denis.lins.bc@gmail.com>"
+  ],
+  "description": "A pure javascript menu for single page applications with animated scroll",
+  "moduleType": [
+    "globals"
+  ],
+  "keywords": [
+    "menu",
+    "scroll",
+    "javascript",
+    "pure"
+  ],
+  "license": "MIT"
+}
