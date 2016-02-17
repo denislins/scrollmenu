@@ -12,7 +12,7 @@ The preferred installation method is via bower:
 $ bower install scrollmenu
 ```
 
-But you can also copy the [file](https://raw.githubusercontent.com/denislins/scrollmenu/master/scrollmenu.js) directly to your application.
+But you can also copy the [file](https://raw.githubusercontent.com/denislins/scrollmenu/master/dist/scrollmenu.min.js) directly to your application.
 
 ### Basic usage
 
