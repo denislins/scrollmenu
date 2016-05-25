@@ -1,6 +1,6 @@
 {
   "name": "scrollmenu",
-  "main": "scrollmenu.js",
+  "main": "dist/scrollmenu.js",
   "homepage": "https://github.com/denislins/scrollmenu",
   "authors": [
     "Denis Lins <denis.lins.bc@gmail.com>"
